@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "model": "baseline_random_forest",
+    "accuracy": 0.7421930447125621,
+    "precision_weighted": 0.8119960331603068,
+    "recall_weighted": 0.7421930447125621,
+    "f1_weighted": 0.7014897882748728
+  },
+  "tuned": {
+    "model": "tuned_random_forest",
+    "accuracy": 0.7419268985095813,
+    "precision_weighted": 0.8115704002372801,
+    "recall_weighted": 0.7419268985095813,
+    "f1_weighted": 0.7011496372228149
+  },
+  "best_params": {
+    "model__n_estimators": 120,
+    "model__min_samples_split": 2,
+    "model__min_samples_leaf": 1,
+    "model__max_depth": null
+  }
+}
