@@ -135,3 +135,4 @@ See [docs/dataset-guide.md](docs/dataset-guide.md) for the expected file layout 
 - Port `5001` is used here because `5000` is occupied on this machine.
 - The frontend defaults to `http://127.0.0.1:5001` unless `NEXT_PUBLIC_API_BASE_URL` is set.
 - If you change the backend port, update both `.env` and the frontend API base URL.
+- Contributor: krupesh-hg
