@@ -1,7 +1,7 @@
 """
 Flask API integration test script.
 Tests the /api/predict, /api/logs, /api/stats endpoints.
-Requires Flask backend to be running on http://localhost:5000.
+Requires Flask backend to be running on http://localhost:5001.
 """
 
 import sys
@@ -13,7 +13,7 @@ import requests
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 TEST_CSV = PROJECT_ROOT / 'test_data.csv'
 
-BASE_URL = 'http://localhost:5000'
+BASE_URL = 'http://localhost:5001'
 
 
 def _require_live_api() -> None:

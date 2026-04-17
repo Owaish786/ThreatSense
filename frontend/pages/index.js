@@ -60,9 +60,15 @@ export default function Home() {
   const [isDeletingLogId, setIsDeletingLogId] = useState(null);
 
   async function refreshDashboard() {
-    const [statsData, logsData] = await Promise.all([fetchStats(), fetchLogs(25)]);
-    setStats(statsData);
-    setRecentLogs(logsData.logs || []);
+    try {
+      const [statsData, logsData] = await Promise.all([fetchStats(), fetchLogs(25)]);
+      setStats(statsData);
+      setRecentLogs(logsData.logs || []);
+    } catch (error) {
+      setStats(null);
+      setRecentLogs([]);
+      setUploadMessage(`Could not load dashboard data: ${error.message}`);
+    }
   }
 
   async function refreshHealth() {
